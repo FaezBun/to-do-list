@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <p class="eyebrow">Today</p>
+        <h1>Todo list</h1>
+        <p class="summary" id="summary">0 tasks remaining</p>
+      </header>
+
+      <form class="add-form" id="add-form" autocomplete="off">
+        <label class="sr-only" for="task-input">Add a task</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          placeholder="What needs doing?"
+          maxlength="120"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <section class="filters" aria-label="Filter tasks">
+        <button type="button" class="filter is-active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="active">Active</button>
+        <button type="button" class="filter" data-filter="done">Done</button>
+      </section>
+
+      <ul class="list" id="task-list"></ul>
+
+      <p class="empty" id="empty-state">Nothing here yet. Add a task to get started.</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
